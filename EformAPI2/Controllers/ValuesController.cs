@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EformAPI2.Filter;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -10,6 +11,8 @@ namespace EformAPI2.Controllers
     public class ValuesController : ApiController
     {
         // GET api/values
+        //[Authorize]
+        //[TokenAuthenticationAttribute]
         public IEnumerable<string> Get()
         {
             return new string[] { "value1", "value2" };
