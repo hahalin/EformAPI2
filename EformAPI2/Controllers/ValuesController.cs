@@ -11,14 +11,19 @@ namespace EformAPI2.Controllers
     public class ValuesController : ApiController
     {
         // GET api/values
-        //[Authorize]
         //[TokenAuthenticationAttribute]
+        [Authorize]
         public IEnumerable<string> Get()
         {
             return new string[] { "value1", "value2" };
         }
 
         // GET api/values/5
+        /// <summary>
+        /// this is get api
+        /// </summary>
+        /// <param name="id"> param 參數 id 意思是帳號</param>
+        /// <returns></returns>
         public string Get(int id)
         {
             return "value";
